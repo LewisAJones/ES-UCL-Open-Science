@@ -4,16 +4,15 @@ author:
   name: Lewis A. Jones
   affiliation: Department of Earth Sciences, University College London
 date: today
-toc: true
 format:
   html:
-    page-layout: full
+    toc: true
+    toc-location: right
+    toc-title: Contents
+    page-layout: article
     warning: false
     code-fold: true
     code-summary: "Show code chunk"
-  pdf:
-    warning: false
-    code-fold: false
 knitr:
   opts_chunk:
     out.width: "100%"
@@ -27,13 +26,11 @@ Below, a report of the survey findings are given, organised around the survey qu
 
 The source code and PDF version of the report can be downloaded here:
 
-[Download source](index.qmd) \| [Download PDF](index.pdf)
+[Download source](index.qmd)
 
 The raw and cleaned data from survey responses can be downloaded here:
 
 [Download raw data](data/survey_responses.csv) \| [Download clean data](data.csv)
-
-# Report preamble
 
 Load required libraries and data.
 
@@ -525,4 +522,35 @@ Responses highlight a need for greater coordination, staff development, and stru
 
 # 19. Any additional comments or suggestions?
 
-Text
+Below, I list and respond to some comments from respondents:
+
+> (1) stay clear of dependency hell (e.g., use base R if possible and only teach standard Python packages); (2) make sure that assessments are AI-proof (I tried an in-person computer assessments for the first time last year and it worked really well).
+this is great but there just isn't room in the timetable without something radical happening. Not that I'm against anything radical happening! But it's a lot of work for someone when we are overworked already.
+
+Perhaps the solution here is a compulsory research skills training course that is not assessed and is perhaps delivered by ARC? This is their area of expertise and they have offered courses in the past. This could help to ensure that all students have the same foundational experience/skill.
+
+> In case it crops up, I am agnostic to the language if we keep our dedicated module. Matlab requires a licence, but Python syntax is awkward. R is a little specialised (although I've never used it).
+
+I think the key thing is to move away from MatLab... student's won't have access to it when they finish their course and it's very rare to see any job advertised today asking for MatLab experience. Are many of us still using MatLab in our own research?
+
+> Well I wish I could code, but am an old dog and cannot learn new tricks! The MSc students have some coding in Methods in Geoscience
+
+Never too late learn! Especially if it is useful for taking care of some menial tasks!
+
+> I use Open Data practices and principles a lot in my own reseach but had not thought about it in a formal sense - it just seemed reasonable and appropriate. It was helpful to think about this in terms of the landscape. I inherited the module last year and without making any changes to what students actually do, I can demonstrate to them a number of Open Science principles just by discussing them at relevant points in the module
+
+I think this is ultimately the best way to do it, sprinkle some Open Science principles throughout modules, set a good example, and expect students to increasingly demonstrated these principles throughout their work (as we do with citing claims/providing references, etc).
+
+> I think transferrable skills like coding and GIS (as well as others) are especially important for preparing students in their future career and need to be better integrated through degree programmes. 
+
+I couldn't agree more!
+
+> We have been trying for a decade to teach coding with very limited success. We need a module that counts, that truly serve other subsequent modules, and we also need to learn from other departments that are successful on this, and also discuss with arc.
+Happy to discuss more. Ultimately you learn coding by doing hence my suggestion to have a problem facing module where coding, software is expected to be part of the solution proposed.
+
+How do we deliver this? Is a steering group of a few interested parties needed to deliver this locally? Should ARC be delivering some foundation course for Departments (or at least the materials)? 
+
+> Python please (not R, sorry Lewis!). R is very restrictive when it comes to *modelling*, and all the data analysis capabilities of R are available within Python via Pandas dataframes (which is explicitly copied on the R dataframe). Also, Python links much better with a wider computational ecosystem than R. For instance, Python interfaces very neatly with C/C++ libraries via Cython which allows you to circumvent its computational slowness. I know that R is used in biological sciences/paleo for data analysis, but more generally Python is much more widespread. Also, because Python operates within an object oriented programming paradigm, skills learned in Python can much more easily be translated into other languages (e.g., Java, C++, the dreaded MatLab) whereas because R is a functional paradigm, the analogous languages are a lot more abstract (e.g., Haskell, Lisp, ML etc.).
+
+I can't say I agree with much of this to be honest! But before I get into my little rant, **I personally think we should be exposing students to multiple languages to improve career prospects but I also don't think we should be aiming to develop software engineers (we're an Earth Science department after all... computing literacy is the goal)**. Now... claiming R is restrictive for modelling misunderstands its core purpose and strengths, R was built specifically for statistical computing, and many advanced modelling approaches are implemented there before Python, with packages such as lme4 for mixed-effects models, mgcv for GAMs, brms for Bayesian multilevel modelling, and INLA for fast Bayesian spatial inference... these often exceed the flexibility offered in Python equivalents. While pandas was inspired by R data frames, R’s ecosystem through dplyr, data.table, tidyr, and seamless integration with ggplot2 and broom offers coherent grammar connecting data wrangling, modelling, and visualisation that is arguably much more unified than what is available in Python. Yes, Python integrates well with C/C++ via Cython, but R interfaces natively with C/C++ and provides Rcpp for efficient compiled extensions, meaning performance limitations are rarely intrinsic, and in many cases heavy computation already runs in optimised backends. I agree that Python is dominant in software engineering, but R remains the community standard across many academic circles, it certainly isn't only limited to biology/palaeo, whole communities in the Earth Sciences use it (e.g. palaeoclimate, geological mapping, GIS/remote sensing, geostatistics, geochemistry, hydrology, stratigraphy, ..., there are over 22,000 packages on the CRAN... many developed by researchers for researchers). R also isn't merely functional, it is multi-paradigm (supporting functional, procedural, and object-oriented systems such as S3, S4, and R6). I think a strong argument can be made that in research contexts, the priority is usually expressing statistical ideas clearly rather than mirroring enterprise software design. My general view is that Python may excel as a general-purpose programming and deployment language, but R offers a specialised statistical computing environment, and in many cases is much better suited for the practical realities of research.
+

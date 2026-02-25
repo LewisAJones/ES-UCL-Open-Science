@@ -4,4 +4,4 @@ project:
 
 format:
   html:
-    theme: default
+    theme: cosmo
