@@ -22,19 +22,16 @@ knitr:
 
 This report is a summary of the 2025 survey '*Coding and Open Science Teaching in the Department of Earth Sciences*'. The survey aimed to map current teaching practices around coding, computational methods, and open science across the Department of Earth Sciences at University College London. Survey findings are intended to guide a potential departmental-level strategy, and assess whether a dedicated 'Research Skills' module focused on coding and open science is needed.
 
-Below, a report of the survey findings are given, organised around the survey questions. The report is generated in Quarto using R, with data processing and visualisaiton code chunks embedded for reproducibility purposes. 
-
-The source code and PDF version of the report can be downloaded here:
-
-[Download source](index.qmd)
+Below, a report of the survey findings are given, organised around the survey questions. The report is generated in Quarto using R, with integrated code chunks for supporting reproducibility. 
 
 The raw and cleaned data from survey responses can be downloaded here:
 
-[Download raw data](data/survey_responses.csv) \| [Download clean data](data.csv)
+<a href="data/survey_responses.csv" download class="btn btn-primary">Download raw data</a>
+<a href="data/data.csv" download class="btn btn-primary">Download clean data</a>
 
 Load required libraries and data.
 
-```{r seup}
+```{r setup}
 # Load required libraries
 library(dplyr)
 library(tibble)
@@ -190,7 +187,7 @@ dat %>%
 
 # 4 Which programming languages or tools are used?
 
-Across modules, students are currently exposed to the following programming languages or tools: Excel / Google Sheets (~33% of modules), Python (~25% of modules), MATLAB (~25% of modules), R (~13% of modules), Shell scripting / command line (~4% of modules). In six modules (~25%), students are not currently exposed to any programming languages or computational tools. Note, the sum of percentages is greater than 100% as some modules contain multiple languages/tools.
+Across modules, students are currently exposed to the following programming languages or tools: Excel / Google Sheets (~33% of modules), Python (~25% of modules), MATLAB (~25% of modules), R (~13% of modules), and Shell scripting / command line (~4% of modules). In six modules (~25%), students are not currently exposed to any programming languages or computational tools. Note, the sum of percentages is greater than 100% as some modules contain multiple languages/tools.
 
 ```{r tools}
 var <- "Which programming languages or tools are used? (select all that apply)"
