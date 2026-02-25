@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Lewis A. Jones">
+<meta name="dcterms.date" content="2026-02-25">
+
+<title>Coding and Open Science Teaching in the Department of Earth Sciences</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="ES-UCL-Open-Science_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ES-UCL-Open-Science_files/libs/quarto-html/quarto.js"></script>
+<script src="ES-UCL-Open-Science_files/libs/quarto-html/popper.min.js"></script>
+<script src="ES-UCL-Open-Science_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="ES-UCL-Open-Science_files/libs/quarto-html/anchor.min.js"></script>
+<link href="ES-UCL-Open-Science_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ES-UCL-Open-Science_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="ES-UCL-Open-Science_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="ES-UCL-Open-Science_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="ES-UCL-Open-Science_files/libs/bootstrap/bootstrap-973236bd072d72a04ee9cd82dcc9cb29.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#report-preamble" id="toc-report-preamble" class="nav-link" data-scroll-target="#report-preamble">Report preamble</a></li>
+  <li><a href="#which-modules-do-we-have-data-available-for" id="toc-which-modules-do-we-have-data-available-for" class="nav-link" data-scroll-target="#which-modules-do-we-have-data-available-for">1. Which modules do we have data available for?</a></li>
+  <li><a href="#what-teaching-levels-do-these-modules-cover" id="toc-what-teaching-levels-do-these-modules-cover" class="nav-link" data-scroll-target="#what-teaching-levels-do-these-modules-cover">2. What teaching levels do these modules cover?</a></li>
+  <li><a href="#are-coding-or-computational-elements-included-in-the-module" id="toc-are-coding-or-computational-elements-included-in-the-module" class="nav-link" data-scroll-target="#are-coding-or-computational-elements-included-in-the-module">3. Are coding or computational elements included in the module?</a></li>
+  <li><a href="#which-programming-languages-or-tools-are-used" id="toc-which-programming-languages-or-tools-are-used" class="nav-link" data-scroll-target="#which-programming-languages-or-tools-are-used">4 Which programming languages or tools are used?</a></li>
+  <li><a href="#at-what-level-are-these-coding-skills-taught" id="toc-at-what-level-are-these-coding-skills-taught" class="nav-link" data-scroll-target="#at-what-level-are-these-coding-skills-taught">5. At what level are these coding skills taught?</a></li>
+  <li><a href="#how-much-time-in-contact-hours-is-dedicated-to-coding-or-computational-training-within-the-module" id="toc-how-much-time-in-contact-hours-is-dedicated-to-coding-or-computational-training-within-the-module" class="nav-link" data-scroll-target="#how-much-time-in-contact-hours-is-dedicated-to-coding-or-computational-training-within-the-module">6. How much time (in contact hours) is dedicated to coding or computational training within the module?</a></li>
+  <li><a href="#how-are-these-skills-taught" id="toc-how-are-these-skills-taught" class="nav-link" data-scroll-target="#how-are-these-skills-taught">7. How are these skills taught?</a></li>
+  <li><a href="#how-do-you-assess-coding-or-computational-skills-in-the-module" id="toc-how-do-you-assess-coding-or-computational-skills-in-the-module" class="nav-link" data-scroll-target="#how-do-you-assess-coding-or-computational-skills-in-the-module">8. How do you assess coding or computational skills in the module?</a></li>
+  <li><a href="#do-you-assume-that-students-taking-your-module-already-have-prior-coding-experience-or-knowledge" id="toc-do-you-assume-that-students-taking-your-module-already-have-prior-coding-experience-or-knowledge" class="nav-link" data-scroll-target="#do-you-assume-that-students-taking-your-module-already-have-prior-coding-experience-or-knowledge">9. Do you assume that students taking your module already have prior coding experience or knowledge?</a></li>
+  <li><a href="#if-prior-knowledgeexperience-is-assummed-which-previous-modules-or-experience-do-you-assume-what-level-of-coding-competency-you-expect-e.g.-basic-syntax-data-plotting-use-of-scripts" id="toc-if-prior-knowledgeexperience-is-assummed-which-previous-modules-or-experience-do-you-assume-what-level-of-coding-competency-you-expect-e.g.-basic-syntax-data-plotting-use-of-scripts" class="nav-link" data-scroll-target="#if-prior-knowledgeexperience-is-assummed-which-previous-modules-or-experience-do-you-assume-what-level-of-coding-competency-you-expect-e.g.-basic-syntax-data-plotting-use-of-scripts">10. If prior knowledge/experience is assummed: Which previous module(s) or experience do you assume? What level of coding competency you expect (e.g.&nbsp;basic syntax, data plotting, use of scripts)</a></li>
+  <li><a href="#do-you-explicitly-teach-or-discuss-any-of-the-following-open-science-practices-in-the-module-select-all-that-apply" id="toc-do-you-explicitly-teach-or-discuss-any-of-the-following-open-science-practices-in-the-module-select-all-that-apply" class="nav-link" data-scroll-target="#do-you-explicitly-teach-or-discuss-any-of-the-following-open-science-practices-in-the-module-select-all-that-apply">11. Do you explicitly teach or discuss any of the following open science practices in the module? (select all that apply)</a></li>
+  <li><a href="#if-taught-how-are-these-topics-integrated-into-the-module" id="toc-if-taught-how-are-these-topics-integrated-into-the-module" class="nav-link" data-scroll-target="#if-taught-how-are-these-topics-integrated-into-the-module">12. If taught, how are these topics integrated into the module?</a></li>
+  <li><a href="#in-the-module-do-students-produce-or-use-openly-available-code-or-datasets-as-part-of-their-coursework-or-projects" id="toc-in-the-module-do-students-produce-or-use-openly-available-code-or-datasets-as-part-of-their-coursework-or-projects" class="nav-link" data-scroll-target="#in-the-module-do-students-produce-or-use-openly-available-code-or-datasets-as-part-of-their-coursework-or-projects">13. In the module, do students produce or use openly available code or datasets as part of their coursework or projects?</a></li>
+  <li><a href="#what-do-you-think-are-the-main-barriers-to-teaching-open-science-practices-select-all-that-apply" id="toc-what-do-you-think-are-the-main-barriers-to-teaching-open-science-practices-select-all-that-apply" class="nav-link" data-scroll-target="#what-do-you-think-are-the-main-barriers-to-teaching-open-science-practices-select-all-that-apply">14. What do you think are the main barriers to teaching open science practices? (select all that apply)</a></li>
+  <li><a href="#how-important-do-you-think-coding-and-open-science-skills-are-for-earth-science-graduates-1-not-important-5-essential" id="toc-how-important-do-you-think-coding-and-open-science-skills-are-for-earth-science-graduates-1-not-important-5-essential" class="nav-link" data-scroll-target="#how-important-do-you-think-coding-and-open-science-skills-are-for-earth-science-graduates-1-not-important-5-essential">15. How important do you think coding and open science skills are for Earth Science graduates? (1 = not important, 5 = essential)</a></li>
+  <li><a href="#do-you-think-there-is-a-need-for-a-dedicated-departmental-module-on-coding-and-open-science-skills" id="toc-do-you-think-there-is-a-need-for-a-dedicated-departmental-module-on-coding-and-open-science-skills" class="nav-link" data-scroll-target="#do-you-think-there-is-a-need-for-a-dedicated-departmental-module-on-coding-and-open-science-skills">16. Do you think there is a need for a dedicated departmental module on coding and open science skills?</a></li>
+  <li><a href="#if-yes-or-maybe-what-do-you-think-such-a-module-should-include" id="toc-if-yes-or-maybe-what-do-you-think-such-a-module-should-include" class="nav-link" data-scroll-target="#if-yes-or-maybe-what-do-you-think-such-a-module-should-include">17. If yes or maybe, what do you think such a module should include?</a></li>
+  <li><a href="#what-support-or-resources-would-help-you-integrate-more-coding-or-open-science-training-into-your-teaching" id="toc-what-support-or-resources-would-help-you-integrate-more-coding-or-open-science-training-into-your-teaching" class="nav-link" data-scroll-target="#what-support-or-resources-would-help-you-integrate-more-coding-or-open-science-training-into-your-teaching">18. What support or resources would help you integrate more coding or open science training into your teaching?</a></li>
+  <li><a href="#any-additional-comments-or-suggestions" id="toc-any-additional-comments-or-suggestions" class="nav-link" data-scroll-target="#any-additional-comments-or-suggestions">19. Any additional comments or suggestions?</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ES-UCL-Open-Science.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</div>
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Coding and Open Science Teaching in the Department of Earth Sciences</h1>
+</div>
+
+
+<div class="quarto-title-meta-author column-page-left">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Lewis A. Jones </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Department of Earth Sciences, University College London
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta column-page-left">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 25, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>This report is a summary of the 2025 survey ‘<em>Coding and Open Science Teaching in the Department of Earth Sciences</em>’. The survey aimed to map current teaching practices around coding, computational methods, and open science across the Department of Earth Sciences at University College London. Survey findings are intended to guide a potential departmental-level strategy, and assess whether a dedicated ‘Research Skills’ module focused on coding and open science is needed.</p>
+<p>Below, a report of the survey findings are given, organised around the survey questions. The report is generated in Quarto using R, with data processing and visualisaiton code chunks embedded for reproducibility purposes.</p>
+<p>The source code and PDF version of the report can be downloaded here:</p>
+<p><a href="ES-UCL-Open-Science.qmd">Download source</a> | <a href="ES-UCL-Open-Science.pdf">Download PDF</a></p>
+<p>The raw and cleaned data from survey responses can be downloaded here:</p>
+<p><a href="data/survey_responses.csv">Download raw data</a> | <a href="data.csv">Download clean data</a></p>
+</section>
+<section id="report-preamble" class="level1">
+<h1>Report preamble</h1>
+<p>Load required libraries and data.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code chunk</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load required libraries</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tibble)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forcats)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/survey_responses.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Clean and wrangle data.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code chunk</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Some data cleaning and wrangling is required</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> dat <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Drop unneccesary columns</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="st">`</span><span class="at">Start time</span><span class="st">`</span>, <span class="st">`</span><span class="at">Completion time</span><span class="st">`</span>, <span class="st">`</span><span class="at">Last modified time</span><span class="st">`</span>, Name, Email)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Rename columns for handling</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Name =</span> Name2,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">Email =</span> Email2) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Filter rows</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Duplicate response: Pieter answered initially with a combined response for modules</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(ID <span class="sc">!=</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Split Stephen's responses (multiple modules per response)</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(., .[<span class="fu">which</span>(.<span class="sc">$</span>ID <span class="sc">==</span> <span class="dv">4</span>), ]) <span class="sc">%&gt;%</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Split Ana's responses (multiple modules per response)</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(., .[<span class="fu">which</span>(.<span class="sc">$</span>ID <span class="sc">==</span> <span class="dv">21</span>), ]) <span class="sc">%&gt;%</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Split Alex's responses (multiple modules per response)</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(., .[<span class="fu">which</span>(.<span class="sc">$</span>ID <span class="sc">==</span> <span class="dv">23</span>), ]) <span class="sc">%&gt;%</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Split Paul's responses (multiple modules per response)</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(., .[<span class="fu">which</span>(.<span class="sc">$</span>ID <span class="sc">==</span> <span class="dv">24</span>), ], .[<span class="fu">which</span>(.<span class="sc">$</span>ID <span class="sc">==</span> <span class="dv">24</span>), ]) <span class="sc">%&gt;%</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Sort by name</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Name) <span class="sc">%&gt;%</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add unique ID</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(.)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Filter rows</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Module reported twice</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="co"># GEOL0044: Palaeoceanography</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(ID <span class="sc">!=</span> <span class="dv">6</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="co"># GEOL0065: Research Methods and Skills</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(ID <span class="sc">!=</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  <span class="co"># GEOL0018: Numerical Methods</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(ID <span class="sc">!=</span> <span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Update unique ID</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(.)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Mutate rows</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Email =</span> <span class="fu">tolower</span>(Email),</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>         <span class="at">Name =</span> <span class="fu">str_to_title</span>(Name),</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">case_when</span>(</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"GEOL0012 Global Geophysics"</span> <span class="sc">~</span> <span class="st">"GEOL0012: Global Geophysics"</span>,</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"GEOL0004"</span> <span class="sc">~</span> <span class="st">"GEOL0004: Dynamic Earth"</span>,</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"GEOL0045 Paleoclimate and Paleoenvironmental Change</span><span class="sc">\n</span><span class="st">(note: taught at Y3, Y4, and MSc levels)"</span> <span class="sc">~</span> <span class="st">"GEOL0045: Palaeoclimate and Palaeoenvironmental Change"</span>,</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"GEOL0077"</span> <span class="sc">~</span> <span class="st">"GEOL0077: Introduction to Mineral Resources"</span>,</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"GEOL0008 (Geochemistry)"</span> <span class="sc">~</span> <span class="st">"GEOL0008: Geochemistry"</span>,</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"GEOL0069: AI4EO"</span> <span class="sc">~</span> <span class="st">"GEOL0069: Artificial Intelligence for Earth Observations"</span>, <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>           ),</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(ID <span class="sc">==</span> <span class="dv">1</span>, <span class="st">"GEOL0031: Environmental Geochemistry"</span>, <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span>),</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(ID <span class="sc">==</span> <span class="dv">2</span>, <span class="st">"GEOL0076: Environmental Geoscience"</span>, <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span>),</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(ID <span class="sc">==</span> <span class="dv">3</span>, <span class="st">"GEOL0030: Seismology II"</span>, <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span>),</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(ID <span class="sc">==</span> <span class="dv">12</span>, <span class="st">"GEOL0003: History of Life"</span>, <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span>),</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(ID <span class="sc">==</span> <span class="dv">13</span>, <span class="st">"GEOL0015: Maps, Images &amp; Structures"</span>, <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span>),</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(ID <span class="sc">==</span> <span class="dv">14</span>, <span class="st">"GEOL0044: Palaeoceanography"</span>, <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span>),</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(ID <span class="sc">==</span> <span class="dv">23</span>, <span class="st">"GEOL0018: Numerical Methods"</span>, <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span>),</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(ID <span class="sc">==</span> <span class="dv">24</span>, <span class="st">"GEOL0020/79: Field Geophysics"</span>, <span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span>),</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(ID <span class="sc">==</span> <span class="dv">1</span>, <span class="st">"Undergraduate – Year 3"</span>, <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span>), </span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(ID <span class="sc">==</span> <span class="dv">2</span>, <span class="st">"Undergraduate – Year 2"</span>, <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span>), </span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(ID <span class="sc">==</span> <span class="dv">3</span>, <span class="st">"Undergraduate – Year 3"</span>, <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span>), </span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(ID <span class="sc">==</span> <span class="dv">12</span>, <span class="st">"Undergraduate – Year 1"</span>, <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span>), </span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(ID <span class="sc">==</span> <span class="dv">13</span>, <span class="st">"Undergraduate – Year 1"</span>, <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span>), </span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(ID <span class="sc">==</span> <span class="dv">14</span>, <span class="st">"Undergraduate – Year 4 (MSci/MSc)"</span>, <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span>),</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(ID <span class="sc">==</span> <span class="dv">23</span>, <span class="st">"Undergraduate – Year 2"</span>, <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span>),</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(<span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"Undergraduate – Year 1;"</span>, <span class="st">"Undergraduate – Year 1"</span>, <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span>),</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(<span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"Undergraduate – Year 2;"</span>, <span class="st">"Undergraduate – Year 2"</span>, <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span>),</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(<span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"Undergraduate – Year 3;"</span>, <span class="st">"Undergraduate – Year 3"</span>, <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span>),</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(<span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"Taught Masters (MSc);"</span>, <span class="st">"Taught Masters (MSc)"</span>, <span class="st">`</span><span class="at">Teaching level:</span><span class="st">`</span>),</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Which programming languages or tools are used? (select all that apply)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">case_when</span>(</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Which programming languages or tools are used? (select all that apply)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"Python;Excel / Google Sheets;QGIS;"</span> <span class="sc">~</span> <span class="st">"Python, Excel / Google Sheets, QGIS"</span>,</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Which programming languages or tools are used? (select all that apply)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"R;QGIS;"</span> <span class="sc">~</span> <span class="st">"R, GIS"</span>,</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Which programming languages or tools are used? (select all that apply)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"MATLAB;"</span> <span class="sc">~</span> <span class="st">"MATLAB"</span>,</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Which programming languages or tools are used? (select all that apply)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"Not applicable"</span> <span class="sc">~</span> <span class="st">"Not applicable"</span>,</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Which programming languages or tools are used? (select all that apply)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"Excel / Google Sheets;"</span> <span class="sc">~</span> <span class="st">"Excel / Google Sheets"</span>,</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Which programming languages or tools are used? (select all that apply)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"MATLAB;GPlates;"</span> <span class="sc">~</span> <span class="st">"MATLAB, GPlates"</span>,</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Which programming languages or tools are used? (select all that apply)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"Python;Shell scripting / command line;"</span> <span class="sc">~</span> <span class="st">"Python, Shell scripting / command line"</span>,</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Which programming languages or tools are used? (select all that apply)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"R;Excel / Google Sheets;"</span> <span class="sc">~</span> <span class="st">"R, Excel / Google Sheets"</span>,</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Which programming languages or tools are used? (select all that apply)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"R;"</span> <span class="sc">~</span> <span class="st">"R"</span>,</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Which programming languages or tools are used? (select all that apply)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"Python;"</span> <span class="sc">~</span> <span class="st">"Python"</span>,</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Which programming languages or tools are used? (select all that apply)</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"MATLAB;Excel / Google Sheets;"</span> <span class="sc">~</span> <span class="st">"MATLAB, Excel / Google Sheets"</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>         ),</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">At what level are these coding skills taught?</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">if_else</span>(<span class="st">`</span><span class="at">At what level are these coding skills taught?</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"Not applicable;"</span>, <span class="st">"Not applicable"</span>, <span class="st">`</span><span class="at">At what level are these coding skills taught?</span><span class="st">`</span>))</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace NA values</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">apply</span>(dat, <span class="dv">2</span>, <span class="cf">function</span>(x) { x[ <span class="fu">is.na</span>(x) ] <span class="ot">&lt;-</span> <span class="st">"Not applicable"</span>; x}))</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(<span class="at">x =</span> dat, <span class="at">file =</span> <span class="st">"data/data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="which-modules-do-we-have-data-available-for" class="level1">
+<h1>1. Which modules do we have data available for?</h1>
+<p>Thanks to everyone’s responses, we have data for 24 modules from 17 different teaching staff. We are missing a few but I believe we have a fairly good representation of modules in the Department. The survey responses received cover the following modules:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code chunk</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print sorted unique list of modules</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(<span class="fu">unique</span>(dat<span class="sc">$</span><span class="st">`</span><span class="at">Module code and name (e.g. GEOL0017: Isotope Geology)</span><span class="st">`</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "GEOL0001: Earth Materials"                                    
+ [2] "GEOL0003: History of Life"                                    
+ [3] "GEOL0004: Dynamic Earth"                                      
+ [4] "GEOL0005: Foundations of Physical Geoscience"                 
+ [5] "GEOL0007: The Earth"                                          
+ [6] "GEOL0008: Geochemistry"                                       
+ [7] "GEOL0009: Vertebrate Palaeontology and Evolution"             
+ [8] "GEOL0012: Global Geophysics"                                  
+ [9] "GEOL0013: Principles of Climate"                              
+[10] "GEOL0015: Maps, Images &amp; Structures"                          
+[11] "GEOL0017: Isotope Geology"                                    
+[12] "GEOL0018: Numerical Methods"                                  
+[13] "GEOL0020/79: Field Geophysics"                                
+[14] "GEOL0030: Seismology II"                                      
+[15] "GEOL0031: Environmental Geochemistry"                         
+[16] "GEOL0036: Advanced Biodiversity and Macroevolutionary Studies"
+[17] "GEOL0044: Palaeoceanography"                                  
+[18] "GEOL0045: Palaeoclimate and Palaeoenvironmental Change"       
+[19] "GEOL0057: Geodynamics and Global Tectonics"                   
+[20] "GEOL0061: Statistics for Geoscientists"                       
+[21] "GEOL0065: Research Methods and Skills"                        
+[22] "GEOL0069: Artificial Intelligence for Earth Observations"     
+[23] "GEOL0076: Environmental Geoscience"                           
+[24] "GEOL0077: Introduction to Mineral Resources"                  </code></pre>
+</div>
+</div>
+</section>
+<section id="what-teaching-levels-do-these-modules-cover" class="level1">
+<h1>2. What teaching levels do these modules cover?</h1>
+<p>Survey responses include modules from all teaching years. Note, several modules are available to students on different courses so the total exceeds 24.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code chunk</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define variable to visualise</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="st">"Teaching level:"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarise and visualise</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(.data[[var]]) <span class="sc">%&gt;%</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="st">`</span><span class="at">Undergraduate – Year 1</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(<span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Year 1"</span>),</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Undergraduate – Year 2</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(<span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Year 2"</span>),</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Undergraduate – Year 3</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(<span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Year 3"</span>),</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Undergraduate – Year 4 (MSci/Msc)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(<span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Year 4"</span>),</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Taught Masters (MSc)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(<span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Taught Masters"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> ., <span class="fu">aes</span>(<span class="at">x =</span> value, <span class="at">y =</span> <span class="fu">fct_reorder</span>(name, value), <span class="at">fill =</span> name)) <span class="sc">+</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> name, <span class="at">x =</span> value <span class="sc">+</span> <span class="fl">0.5</span>), <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> value), <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>), <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Counts"</span>) <span class="sc">+</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ES-UCL-Open-Science_files/figure-html/level-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="are-coding-or-computational-elements-included-in-the-module" class="level1">
+<h1>3. Are coding or computational elements included in the module?</h1>
+<p>Of the modules we have data for, coding or computational elements are currently a core component of ~54% of modules (13), and an optional or supplementary activity of ~21% of modules (5). The remaining 25% of modules (6) do not have any coding or computational element.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code chunk</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define variable for plotting</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="st">"Do you include coding or computational elements in the module?"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarise and visualise data</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(.data[[var]]) <span class="sc">%&gt;%</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">length</span>(.data[[var]])) <span class="sc">%&gt;%</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> ., <span class="fu">aes</span>(<span class="at">x =</span> n, <span class="at">y =</span> <span class="fu">fct_reorder</span>(.data[[var]], n), <span class="at">fill =</span> .data[[var]])) <span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> .data[[var]], <span class="at">x =</span> n <span class="sc">+</span> <span class="fl">0.5</span>), <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> n), <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>), <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Counts"</span>) <span class="sc">+</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.x =</span> <span class="fu">element_text</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ES-UCL-Open-Science_files/figure-html/elements-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="which-programming-languages-or-tools-are-used" class="level1">
+<h1>4 Which programming languages or tools are used?</h1>
+<p>Across modules, students are currently exposed to the following programming languages or tools: Excel / Google Sheets (~33% of modules), Python (~25% of modules), MATLAB (~25% of modules), R (~13% of modules), Shell scripting / command line (~4% of modules). In six modules (~25%), students are not currently exposed to any programming languages or computational tools. Note, the sum of percentages is greater than 100% as some modules contain multiple languages/tools.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code chunk</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="st">"Which programming languages or tools are used? (select all that apply)"</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(.data[[var]]) <span class="sc">%&gt;%</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">R =</span> <span class="fu">str_count</span>(<span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"R"</span>),</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">MATLAB =</span> <span class="fu">str_count</span>(<span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"MATLAB"</span>),</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Shell scripting / command line</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(<span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Shell scripting / command line"</span>),</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Excel / Google Sheets</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(<span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Excel / Google Sheets"</span>),</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">Python =</span> <span class="fu">str_count</span>(<span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Python"</span>),</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Not applicable</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(<span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Not applicable"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> ., <span class="fu">aes</span>(<span class="at">x =</span> value, <span class="at">y =</span> <span class="fu">fct_reorder</span>(name, value), <span class="at">fill =</span> name)) <span class="sc">+</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> name, <span class="at">x =</span> value <span class="sc">+</span> <span class="fl">0.5</span>), <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> value), <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>), <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Counts"</span>) <span class="sc">+</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.x =</span> <span class="fu">element_text</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ES-UCL-Open-Science_files/figure-html/tools-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="at-what-level-are-these-coding-skills-taught" class="level1">
+<h1>5. At what level are these coding skills taught?</h1>
+<p>Across the 24 modules recorded, students are exposed to an introductory (~66% of modules), intermediate (~41% of modules), and advanced (~4%) level of coding skills. As above, in six modules (~25%), students are not currently exposed to coding. Note, the sum of percentages is greater than 100% as some modules contain multiple languages/tools.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code chunk</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="st">"At what level are these coding skills taught?"</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(.data[[var]]) <span class="sc">%&gt;%</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="st">`</span><span class="at">Introductory (basic syntax, plotting, simple analysis)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Introductory"</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Intermediate (data wrangling, functions, reproducible workflows)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Intermediate"</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Advanced (modelling, automation, software development, HPC)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Advanced"</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Not applicable</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(<span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Not applicable"</span>)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>            ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> ., <span class="fu">aes</span>(<span class="at">x =</span> value, <span class="at">y =</span> <span class="fu">fct_reorder</span>(name, value), <span class="at">fill =</span> name)) <span class="sc">+</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> name, <span class="at">x =</span> value <span class="sc">+</span> <span class="fl">0.5</span>), <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> value), <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>), <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">40</span>)) <span class="sc">+</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Counts"</span>) <span class="sc">+</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.x =</span> <span class="fu">element_text</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ES-UCL-Open-Science_files/figure-html/skill-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="how-much-time-in-contact-hours-is-dedicated-to-coding-or-computational-training-within-the-module" class="level1">
+<h1>6. How much time (in contact hours) is dedicated to coding or computational training within the module?</h1>
+<p>The contact hours dedicated to coding or computational training is variable across modules, with ~13% of modules (n = 3) exposing students to more than 10 dedicated hours of coding or computational training, while ~42% of modules have less than 2 hours or no exposure (n = 10).</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code chunk</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="st">"How much time (in contact hours) is dedicated to coding or computational training within the module?"</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(.data[[var]]) <span class="sc">%&gt;%</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">length</span>(.data[[var]])) <span class="sc">%&gt;%</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> ., <span class="fu">aes</span>(<span class="at">x =</span> n, <span class="at">y =</span> <span class="fu">fct_reorder</span>(.data[[var]], n), <span class="at">fill =</span> .data[[var]])) <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> .data[[var]], <span class="at">x =</span> n <span class="sc">+</span> <span class="fl">0.5</span>), <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"black"</span>, ) <span class="sc">+</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> n), <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>), <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">9</span>)) <span class="sc">+</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Counts"</span>) <span class="sc">+</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.x =</span> <span class="fu">element_text</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ES-UCL-Open-Science_files/figure-html/time-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="how-are-these-skills-taught" class="level1">
+<h1>7. How are these skills taught?</h1>
+<p>A range of approaches are used to deliver computation training with practical computer labs being the most common approach (~58% of modules). Perhaps unsurprisingly, lecture and group projects are the least common delivery approach for computational training.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code chunk</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="st">"How do you teach these skills? (select all that apply)"</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(.data[[var]]) <span class="sc">%&gt;%</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="st">`</span><span class="at">Practical computer labs</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"computer labs|practical sessions"</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Self-guided exercises / notebooks</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"notebooks"</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Lectures</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Lectures"</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Group projects</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Group projects"</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Not applicable</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(<span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Not applicable"</span>)</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>            ) <span class="sc">%&gt;%</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> ., <span class="fu">aes</span>(<span class="at">x =</span> value, <span class="at">y =</span> <span class="fu">fct_reorder</span>(name, value), <span class="at">fill =</span> name)) <span class="sc">+</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> name, <span class="at">x =</span> value <span class="sc">+</span> <span class="fl">0.5</span>), <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> value), <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>), <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Counts"</span>) <span class="sc">+</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.x =</span> <span class="fu">element_text</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ES-UCL-Open-Science_files/figure-html/delivery-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="how-do-you-assess-coding-or-computational-skills-in-the-module" class="level1">
+<h1>8. How do you assess coding or computational skills in the module?</h1>
+<p>Responses indicate that coding and computational skills are often not assessed directly within modules, but are instead used as supporting tools for completing coursework, particularly for generating figures, plots, and data analyses. In many cases, students are expected to use a computational tool of their choice to achieve specified outputs, without formal instruction or explicit marking of coding ability. Where coding is assessed, this typically occurs through submitted code files that are checked for functionality and commenting, in-person programming exercises, practical assessments, coursework assignments, or projects, sometimes contributing between 5–30% of the final mark. A few modules include exam-based coding tasks or assessed practicals, while others assess written reports that rely on code-generated outputs rather than the code itself. Several respondents noted plans to introduce or expand Python-based practicals, and some assessments are formative only. Overall, direct assessment of coding skills appears variable and, in many cases, limited or indirect.</p>
+</section>
+<section id="do-you-assume-that-students-taking-your-module-already-have-prior-coding-experience-or-knowledge" class="level1">
+<h1>9. Do you assume that students taking your module already have prior coding experience or knowledge?</h1>
+<p>Responses indicate that prior coding experience or knowledge is assummed (fully/partly) for ~63% of modules (n = 15), while for 25% of modules no former knowledge or experience is expected.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code chunk</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="st">"Do you assume that students taking your module already have prior coding experience or knowledge?"</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(.data[[var]]) <span class="sc">%&gt;%</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">length</span>(.data[[var]])) <span class="sc">%&gt;%</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(.data[[var]])) <span class="sc">%&gt;%</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> ., <span class="fu">aes</span>(<span class="at">x =</span> n, <span class="at">y =</span> <span class="fu">fct_reorder</span>(.data[[var]], n), <span class="at">fill =</span> .data[[var]])) <span class="sc">+</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> .data[[var]], <span class="at">x =</span> n <span class="sc">+</span> <span class="fl">0.5</span>), <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> n), <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>), <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">20</span>)) <span class="sc">+</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Counts"</span>) <span class="sc">+</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.x =</span> <span class="fu">element_text</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ES-UCL-Open-Science_files/figure-html/prior-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="if-prior-knowledgeexperience-is-assummed-which-previous-modules-or-experience-do-you-assume-what-level-of-coding-competency-you-expect-e.g.-basic-syntax-data-plotting-use-of-scripts" class="level1">
+<h1>10. If prior knowledge/experience is assummed: Which previous module(s) or experience do you assume? What level of coding competency you expect (e.g.&nbsp;basic syntax, data plotting, use of scripts)</h1>
+<p>Most respondents assume that students have at least some prior coding experience, typically through a first-year MATLAB module, which is commonly referenced as foundational. Many expect familiarity with basic syntax, plotting, and simple data analysis tasks, particularly in MATLAB, and in some cases Python or R. Several also assume competence in Excel for graphing and basic calculations. However, assumptions vary depending on cohort: some lecturers explicitly check students’ skill levels at the start (e.g.&nbsp;via a short diagnostic assessment) or ask about prior experience and offer introductory support where needed. MSc and non-departmental students are recognised as having highly variable backgrounds, ranging from proficient programmers to those with little or no experience. Overall, while a baseline of introductory coding exposure is often assumed, there is acknowledgement that skill levels are mixed and sometimes require reinforcement.</p>
+</section>
+<section id="do-you-explicitly-teach-or-discuss-any-of-the-following-open-science-practices-in-the-module-select-all-that-apply" class="level1">
+<h1>11. Do you explicitly teach or discuss any of the following open science practices in the module? (select all that apply)</h1>
+<p>Responses indicate that explicit teaching of open science practices is limited overall, with the largest number of respondents (12) indicating that such practices are not applicable to their module. Among those who do address open science, data visualisation is the most commonly taught topic (10 responses). Research transparency and ethics, and open data/data sharing are each covered by 6 respondents. Fewer modules explicitly discuss reproducible research workflows and open-source software development (4 each), while version control (e.g.&nbsp;Git/GitHub) and data management and FAIR principles are each mentioned by 3 respondents. Preprints and open-access publishing are the least frequently discussed topics (2 responses). Overall, engagement with open science practices appears uneven, with emphasis placed more on visualisation and general transparency than on technical practices such as version control or FAIR data management.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code chunk</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="st">"Do you explicitly teach or discuss any of the following open science practices in the module? (select all that apply)"</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(.data[[var]]) <span class="sc">%&gt;%</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="st">`</span><span class="at">Version control (e.g. Git, GitHub)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Version control"</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Data management and FAIR principles</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Data management and FAIR principles"</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Reproducible research workflows</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Reproducible research workflows"</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Data visualisation</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Data visualisation"</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Open data / data sharing</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Open data / data sharing"</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Open-source software development</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Open-source software development"</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Preprints / open-access publishing</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Preprints / open-access publishing"</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Research transparency and ethics</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Research transparency and ethics"</span></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Not applicable</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(<span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Not applicable"</span>)</span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>            ) <span class="sc">%&gt;%</span></span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> ., <span class="fu">aes</span>(<span class="at">x =</span> value, <span class="at">y =</span> <span class="fu">fct_reorder</span>(name, value), <span class="at">fill =</span> name)) <span class="sc">+</span></span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> name, <span class="at">x =</span> value <span class="sc">+</span> <span class="fl">0.1</span>), <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> value), <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>), <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">20</span>)) <span class="sc">+</span></span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Counts"</span>) <span class="sc">+</span></span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.x =</span> <span class="fu">element_text</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ES-UCL-Open-Science_files/figure-html/practices-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="if-taught-how-are-these-topics-integrated-into-the-module" class="level1">
+<h1>12. If taught, how are these topics integrated into the module?</h1>
+<p>Where open science practices are taught, they are generally embedded within practical work, coursework, and research-led teaching rather than delivered as standalone topics. Several modules integrate these themes through the use of open tools and platforms, such as requiring submission in RMarkdown, providing lecture notes and supporting R packages via CRAN and GitHub, and encouraging student interaction with repositories (e.g.&nbsp;issuing pull requests). In some cases, students analyse their own data linked to FAIR publications, use public datasets, or work with openly available Python and mapping tools, with discussion of data provenance, funding, and open publication practices. Open science principles are also reinforced through research-focused activities such as group presentations on published papers (including discussion of reproducibility and methods transparency), contribution statements in group reports (CREDIT), and dedicated introductory lectures within practical blocks. Overall, integration tends to occur through authentic research workflows, practical exercises, and assessment design, with emphasis on clean, reproducible coding practices and awareness of professional standards.</p>
+</section>
+<section id="in-the-module-do-students-produce-or-use-openly-available-code-or-datasets-as-part-of-their-coursework-or-projects" class="level1">
+<h1>13. In the module, do students produce or use openly available code or datasets as part of their coursework or projects?</h1>
+<p>Responses suggest that the use or production of openly available code or datasets is not yet widespread. The largest group of respondents (11) indicated that students rarely or never engage with openly available code or data in their coursework or projects. Six reported that this occurs routinely within their modules, while three said it happens occasionally. Four respondents considered the question not applicable to their teaching. Overall, while a minority of modules regularly incorporate open code or datasets, most either do so infrequently or not at all, indicating uneven adoption across the curriculum.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code chunk</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="st">"In the module, do students produce or use openly available code or datasets as part of their coursework or projects?"</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(.data[[var]]) <span class="sc">%&gt;%</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">length</span>(.data[[var]])) <span class="sc">%&gt;%</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(.data[[var]])) <span class="sc">%&gt;%</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> ., <span class="fu">aes</span>(<span class="at">x =</span> n, <span class="at">y =</span> <span class="fu">fct_reorder</span>(.data[[var]], n), <span class="at">fill =</span> .data[[var]])) <span class="sc">+</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> .data[[var]], <span class="at">x =</span> n <span class="sc">+</span> <span class="fl">0.1</span>), <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> n), <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>), <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">20</span>)) <span class="sc">+</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Counts"</span>) <span class="sc">+</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.x =</span> <span class="fu">element_text</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ES-UCL-Open-Science_files/figure-html/fair-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="what-do-you-think-are-the-main-barriers-to-teaching-open-science-practices-select-all-that-apply" class="level1">
+<h1>14. What do you think are the main barriers to teaching open science practices? (select all that apply)</h1>
+<p>The main barriers to teaching open science practices are perceived to be structural and capacity-related rather than technical. The most frequently cited challenge is lack of time within modules (14 responses), suggesting curriculum pressure as the primary constraint. This is followed by student readiness and variable background (9 responses), indicating concerns about differing skill levels. Lack of staff expertise is also a notable barrier (7 responses). Fewer respondents identified lack of departmental coordination or resources (3 responses), and none reported technical constraints (e.g.&nbsp;software or IT) as a barrier. Overall, time pressures and varying levels of staff and student preparedness are seen as the key obstacles to embedding open science practices more fully in teaching.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code chunk</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="st">"What do you think are the main barriers to teaching open science practices? (select all that apply)"</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(.data[[var]]) <span class="sc">%&gt;%</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="st">`</span><span class="at">Lack of time within modules</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Lack of time within modules"</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Student readiness / variable background</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Student readiness"</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Lack of staff expertise</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Lack of staff expertise"</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Lack of departmental coordination or resources</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Lack of departmental coordinates or resources"</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>           <span class="st">`</span><span class="at">Technical constraints (software, IT)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Technical constraints"</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Not applicable</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(<span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Not applicable"</span>)</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>            ) <span class="sc">%&gt;%</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> ., <span class="fu">aes</span>(<span class="at">x =</span> value, <span class="at">y =</span> <span class="fu">fct_reorder</span>(name, value), <span class="at">fill =</span> name)) <span class="sc">+</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> name, <span class="at">x =</span> value <span class="sc">+</span> <span class="fl">0.5</span>), <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> value), <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>), <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Counts"</span>) <span class="sc">+</span></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.x =</span> <span class="fu">element_text</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ES-UCL-Open-Science_files/figure-html/barriers-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="how-important-do-you-think-coding-and-open-science-skills-are-for-earth-science-graduates-1-not-important-5-essential" class="level1">
+<h1>15. How important do you think coding and open science skills are for Earth Science graduates? (1 = not important, 5 = essential)</h1>
+<p>Responses suggest that coding and open science skills are highly valued for Earth Science graduates, with many respondents (13) considering that they are essential and others that they are of high importance (9). No respondent consider these skills to be of little importance.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code chunk</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="st">"How important do you think coding and open science skills are for Earth Science graduates? (1 = not important, 5 = essential)"</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(.data[[var]]) <span class="sc">%&gt;%</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="st">`</span><span class="at">Score 1 (not important)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"1"</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Score 2</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"2"</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Score 3</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"3"</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Score 4</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"4"</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Score 5 (essential)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"5"</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>              )</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>            ) <span class="sc">%&gt;%</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> ., <span class="fu">aes</span>(<span class="at">x =</span> value, <span class="at">y =</span> <span class="fu">fct_reorder</span>(name, value), <span class="at">fill =</span> name)) <span class="sc">+</span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> name, <span class="at">x =</span> value <span class="sc">+</span> <span class="fl">0.5</span>), <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> value), <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>), <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Counts"</span>) <span class="sc">+</span></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.x =</span> <span class="fu">element_text</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ES-UCL-Open-Science_files/figure-html/importance-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="do-you-think-there-is-a-need-for-a-dedicated-departmental-module-on-coding-and-open-science-skills" class="level1">
+<h1>16. Do you think there is a need for a dedicated departmental module on coding and open science skills?</h1>
+<p>While coding and open science skills are considered to be of high value, respondents are largely unsure (15) about whether there should be a dedicated departmental module on training these skills. Several respondents (7) demonstrated support for a dedicated module while some (2) have reservations about the need for such a module.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show code chunk</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>var <span class="ot">&lt;-</span> <span class="st">"Do you think there is a need for a dedicated departmental module on coding and open science skills?"</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(.data[[var]]) <span class="sc">%&gt;%</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="st">`</span><span class="at">Yes</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Yes"</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Maybe / not sure</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"Maybe / not sure"</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>              ),</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">No</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">str_count</span>(</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>              <span class="at">string =</span> ., <span class="at">pattern =</span> <span class="st">"No"</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>              )</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>            ) <span class="sc">%&gt;%</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> ., <span class="fu">aes</span>(<span class="at">x =</span> value, <span class="at">y =</span> <span class="fu">fct_reorder</span>(name, value), <span class="at">fill =</span> name)) <span class="sc">+</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> name, <span class="at">x =</span> value <span class="sc">+</span> <span class="fl">0.5</span>), <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> value), <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>), <span class="at">colour =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Counts"</span>) <span class="sc">+</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.x =</span> <span class="fu">element_text</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ES-UCL-Open-Science_files/figure-html/dedicated-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="if-yes-or-maybe-what-do-you-think-such-a-module-should-include" class="level1">
+<h1>17. If yes or maybe, what do you think such a module should include?</h1>
+<p>Responses suggest broad support for strengthening coding provision, though there is less consensus on whether this should take the form of a standalone departmental module or better integration across the curriculum. Many respondents favour a dedicated, compulsory module early in undergraduate programmes to ensure all students gain basic programming skills (e.g.&nbsp;loops, data visualisation, version control, Linux/Git) and consistent foundations, particularly given variable backgrounds and low engagement with unassessed provision. Others argue that coding and open science principles may be more effective if embedded within existing subject-specific modules, provided there is improved coordination and sufficient staff expertise. Several emphasise the importance of employability, AI literacy, good coding practice, and Earth Sciences–relevant examples, while some view open science skills as more essential for postgraduate or research-focused students than undergraduates. Overall, there is clear recognition of the importance of coding skills for all students, but mixed views on whether a new standalone module or structured integration across programmes would be the best approach.</p>
+</section>
+<section id="what-support-or-resources-would-help-you-integrate-more-coding-or-open-science-training-into-your-teaching" class="level1">
+<h1>18. What support or resources would help you integrate more coding or open science training into your teaching?</h1>
+<p>Responses highlight a need for greater coordination, staff development, and structural support to embed more coding and open science training. Several respondents emphasise the value of a coherent, department-wide approach—such as a coordinated shift toward Python, clearer expectations of student skill levels, and a “golden thread” of coding across modules—to ensure consistency. Others noted the need for additional teaching time, dedicated practical slots, or support from colleagues with relevant expertise. Staff confidence and training were recurring themes, with some indicating they would require time to develop their own coding skills before integrating it into teaching. Suggested practical resources include editable slide decks, a departmental GitHub account, and a dedicated open science resources webpage. A few respondents raised the need for guidance on AI-related issues. Overall, the main supports identified were improved coordination, shared resources, staff upskilling, and sufficient curriculum time.</p>
+</section>
+<section id="any-additional-comments-or-suggestions" class="level1">
+<h1>19. Any additional comments or suggestions?</h1>
+<p>Text</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
