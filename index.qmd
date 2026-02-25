@@ -27,7 +27,7 @@ Below, a report of the survey findings are given, organised around the survey qu
 
 The source code and PDF version of the report can be downloaded here:
 
-[Download source](ES-UCL-Open-Science.qmd) \| [Download PDF](ES-UCL-Open-Science.pdf)
+[Download source](index.qmd) \| [Download PDF](index.pdf)
 
 The raw and cleaned data from survey responses can be downloaded here:
 

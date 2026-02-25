@@ -1,5 +1,7 @@
 project:
-  title: "ES-UCL-Open-Science"
+  type: website
+  output-dir: docs
 
-editor: visual
-
+format:
+  html:
+    theme: default
