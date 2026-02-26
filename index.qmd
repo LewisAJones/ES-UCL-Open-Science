@@ -24,11 +24,6 @@ This report is a summary of the 2025 survey '*Coding and Open Science Teaching i
 
 Below, a report of the survey findings are given, organised around the survey questions. The report is generated in Quarto using R, with integrated code chunks for supporting reproducibility. 
 
-The raw and cleaned data from survey responses can be downloaded here:
-
-<a href="data/survey_responses.csv" download class="btn btn-primary">Download raw data</a>
-<a href="data/data.csv" download class="btn btn-primary">Download clean data</a>
-
 Load required libraries and data.
 
 ```{r setup}
